@@ -1,0 +1,376 @@
+/* the styles for the elements */
+
+html {
+    background-color: white;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    border: 3px #191970;
+    border-style: solid;
+    width: 800px;
+    margin: 0 auto;
+    background-color: #fffded;
+    /*background-origin: content-box;*/
+          
+   }
+
+
+/* the styles for the nav menu */
+#nav_menu ul {
+    list-style: none;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+#nav_menu ul li { float: left; width:20%; }
+
+#nav_menu ul li a {
+    text-align: center;
+    display: block;
+    width: 160px;
+    padding: 1em 0;
+    margin: 0;
+    text-decoration: none;
+    background-color: #8080ff;
+    color: white;
+    font-weight: bold;
+    
+}
+
+
+
+#nav_menu ul li a.current {
+    color: yellow;
+}
+
+#nav_menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+
+#nav_menu ul ul li { float: none; }
+
+#nav_menu ul li:hover > ul {
+    display: block;
+}
+
+#nav_menu > ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+ 
+/* the styles for the header */
+header {
+    border-bottom-width: 3px;
+    border-bottom-style:  solid;
+    border-bottom-color: #191970;
+    padding-top: 1.5em;
+    padding-bottom: 2em;
+    background-image: -webkit-linear-gradient(30deg, #B0E0E6 0%, #B0E0E6 30%, white 50%, #B0E0E6 80%, #B0E0E6 100%);
+    background-image: -moz-linear-gradient(30deg, #B0E0E6 0%, #B0E0E6 30%, white 50%, #B0E0E6 80%, #B0E0E6 100%);
+    background-image: -o-linear-gradient(30deg, #B0E0E6 0%, #B0E0E6 30%, white 50%, #B0E0E6 80%, #B0E0E6 100%);
+    background-image: linear-gradient(30deg, #B0E0E6 0%, #B0E0E6 30%, white 50%, #B0E0E6 80%, #B0E0E6 100%);
+
+   }
+
+header img {
+	float: left;
+    padding-right: 30px;
+    padding-left: 30px;
+    
+}
+
+header h2 {
+    font-size: 170%;
+    color: #000000;
+       }
+
+header h3 {
+    font-size: 130%;
+    font-style: italic;
+   
+}
+
+.shadow {
+    text-shadow: 2px 2px #C0C0C0;
+} 
+
+main {
+	clear: left;
+    /*padding-right: 30px;
+    padding-left: 30px;*/
+    
+}
+
+main p {
+     padding-bottom: .5em;
+}
+
+/* the styles for the section */
+
+section {
+    width: 525px;
+    float: right;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+section h1 { 
+    font-size: 150%;
+    padding-top: .5em;
+    padding-bottom: .25em;
+    margin-top: 0;
+    margin-bottom: 0;
+} 
+
+section h2 { font-size: 130%;
+    color: #000000;
+    padding-top: .5em;
+    padding-bottom: .25em;
+}
+
+ section p {
+    padding-bottom: .5em;
+}
+
+ section blockquote {
+    padding-right: 2em;
+    padding-left: 2em;
+    font-style: italic;
+}
+
+ section ul { 
+    padding-bottom: .25em;
+    padding-left: 1.25em;
+}
+
+ section li {
+    padding-bottom: .35em;
+}
+
+/* the styles for the aside */
+
+aside {
+    width: 215px;
+    float: right;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    
+}
+
+ 
+ aside h2 { font-size: 130%;
+    color: #000000;
+    padding-top: .5em;
+    padding-bottom: .25em;
+}
+
+ aside h3 { 
+    font-size: 105%;
+    padding-bottom: .25em;
+     
+}
+
+ aside img {
+    padding-bottom: 1em;
+}
+
+aside a:hover, a:focus { font-style: italic}
+
+/* the styles for the article */
+article {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    }
+
+article img {
+    float: right;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    margin-left: .5em;
+    margin-right: .5em;
+    border: 1px solid black;
+}
+
+article h2 {
+    padding-top: 0;
+}
+
+article h3 {
+    font-size: 105%;
+    padding-bottom: .25em;
+}
+
+/* the styles for the footer */
+footer p {
+    text-align: center;
+    color: #000000;
+    background-color: #B0E0E6;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+footer {
+    clear:both;
+}
+
+/* the reset selector */
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+/* mobile portrait layout (479px or less) */
+@media only screen and (max-width: 479px) {
+    body {font-size: 90%; }
+    
+}
+
+/* CSS for the SlickNav Menu */
+/* hide the mobile menu */
+#mobile_menu { display: none; }
+
+/* display the mobile menu */
+#mobile_menu { display: block; }
+
+
+/* css for font family */
+@font-face {
+    font-family: Butterfly;
+    src: url("CALIFR.TTF");
+}
+
+header h2, h3 {
+    font-family: Butterfly, sans-serif;
+}
+
+/* the styles to animate the images when page loads in browser */
+aside img {animation: moveright 3s ease-in-out 2s 4 alternate; 
+             transform: rotate(20deg);       
+}
+
+@keyframes moveright {
+    from {transform: translate(80px, 20px);
+    }
+}
+
+/* the styles for the transform of article image */
+article img:hover {
+    transition: 3s;
+    transform: rotate(720deg);
+    transform-origin: top left;
+    
+}
+
+
+/* styles for the figure and figcaption table elements */
+figure {
+    float: right;
+    width: 30%;
+    margin: 0.5em;
+    padding: 0.5em;
+    }
+
+figcaption {
+    display:block;
+    font-style:italic;
+    text-align: left;
+    color:black;
+    padding-top: .25em;
+    margin-bottom: 1em;
+    
+    
+}
+
+figure.table {
+    float: left;
+    width: 30%;
+    margin: 0.5em;
+    padding: 0.5em;
+    }
+
+figcaption.schedule {
+    display:block;
+    font-style:italic;
+    text-align: center;
+    color:black;
+    padding-top: .5em;
+    margin-bottom: 1em;
+    
+    
+}
+
+table {
+    float: left;
+    width: 100%;
+    padding: 10px 5px;
+    border-collapse: collapse;
+    /*border: 2px solid #800000; */
+    /*margin: 10px auto; */
+
+}
+
+thead {
+    border-top: 2px solid #800000;
+    border-bottom: 2px solid #800000;
+}
+
+th {
+    padding: 5px 10px;
+    text-align: left;
+}
+
+td {
+    padding: 5px 10px;
+}
+
+table tr td:last-child {
+    text-align: right;
+}
+
+table tr.border-bottom {
+    border-bottom: 2px solid #800000;
+}
+
+/*image rollover */
+#image1 {
+    background-image: url("/images/monarchresize.jpg");
+    background-size: cover;
+    width: 455px;
+    height: 350px;
+}
+
+#image1:hover {
+    background-image: url("/images/blackswallowtailresize.jpg");
+}
+
+#image2 {
+    background-image: url("/images/brosisbutterfly.jpg");
+    background-size: cover;
+    width: 455px;
+    height: 350px;
+}
+
+#image2:hover {
+    background-image: url("/images/kidbutterfly2.jpg")
+}
+
+#image3 {
+    background-image: url("/images/zinnias.jpg");
+    background-size: cover;
+    width: 455px;
+    height: 350px;
+}
+
+#image3:hover {
+    background-image: url("/images/sunflowerresize.jpg")
+}
